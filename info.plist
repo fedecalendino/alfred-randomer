@@ -85,7 +85,7 @@
 				<key>scriptfile</key>
 				<string></string>
 				<key>subtext</key>
-				<string></string>
+				<string>! [type: email/imei/unit/uuid]</string>
 				<key>title</key>
 				<string>Generate random values for different data types</string>
 				<key>type</key>
