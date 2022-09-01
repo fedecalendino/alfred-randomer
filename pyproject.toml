@@ -13,6 +13,7 @@ authors = [
 [tool.poetry.dependencies]
 python = ">=3.8,<3.11"
 alfred-pyflow = "latest"
+Nuitka = "^1.0.6"
 
 [tool.poetry.dev-dependencies]
 black = "latest"
