@@ -1,20 +1,24 @@
 function build() {
-  echo "Generating binary file for $1"
+  echo "Generating $1 binary"
   echo
 
-  poetry run python3 -m nuitka --onefile "src/$1.py"
+  poetry run pyinstaller --onedir --paths ./src/ "src/$1.py" 1> /dev/null
 
+  echo "Workspace cleanup"
   echo
-  echo "Cleaning up nuitka temporary files..."
-   rm -rf "$1.build/"
-   rm -rf "$1.dist/"
-   rm -rf "$1.onefile-build/"
 
-	 mkdir bin 2> /dev/null
-	 mv "$1.bin" "./bin/$1"
+  rm "./$1.spec"
+  rm -rf "./build/"
 
   echo
 	echo "Finished generating bin file for $1"
+	echo
 }
 
+
+rm -rf "./dist/"
+
 build main
+
+echo "Finished"
+echo
