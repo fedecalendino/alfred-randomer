@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "Randomer"
-version = "1.3.0"
+version = "1.4.0"
 description = "Generate random values for different data types"
 documentation = "https://github.com/fedecalendino/alfred-randomer/blob/main/README.md"
 homepage = "https://github.com/fedecalendino/alfred-randomer"
