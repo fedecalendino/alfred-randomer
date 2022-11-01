@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "Randomer"
-version = "1.4.0"
+version = "1.5.0"
 description = "Generate random values for different data types"
 documentation = "https://github.com/fedecalendino/alfred-randomer/blob/main/README.md"
 homepage = "https://github.com/fedecalendino/alfred-randomer"
@@ -16,7 +16,6 @@ alfred-pyflow = "latest"
 
 [tool.poetry.dev-dependencies]
 black = "22.10.0"
-pyinstaller = "5.5"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
