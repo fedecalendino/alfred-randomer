@@ -130,7 +130,7 @@
 				<key>placeholder</key>
 				<string></string>
 				<key>required</key>
-				<false/>
+				<true/>
 				<key>trim</key>
 				<true/>
 			</dict>
