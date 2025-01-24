@@ -85,7 +85,7 @@
 				<key>scriptfile</key>
 				<string></string>
 				<key>subtext</key>
-				<string>! [type: email/imei/unit/uuid]</string>
+				<string>! [type: email/imei/unit/uuid] [amount: 1]</string>
 				<key>title</key>
 				<string>Generate random values for different data types</string>
 				<key>type</key>
@@ -145,7 +145,7 @@
 		</dict>
 	</array>
 	<key>version</key>
-	<string>1.5.1</string>
+	<string>1.6.0</string>
 	<key>webaddress</key>
 	<string>https://github.com/fedecalendino/alfred-randomer</string>
 </dict>

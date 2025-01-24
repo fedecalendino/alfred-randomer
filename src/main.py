@@ -1,4 +1,5 @@
 import sys
+from typing import List
 
 from pyflow import Workflow
 
@@ -13,21 +14,34 @@ GENERATORS = {
 }
 
 
-def main(workflow):
-    param = " ".join(workflow.args).lower()
+def parse_args(args: List[str]) -> tuple:
+    if len(args) >= 2:
+        return args[0].lower(), int(args[1])
 
-    if param in GENERATORS:
-        items = [param] * 5
+    if len(args) == 1:
+        try:
+            return None, int(args[0])
+        except ValueError:
+            return args[0].lower(), 1
+
+    return None, 1
+
+
+def main(workflow):
+    generator, amount = parse_args(workflow.args)
+
+    if generator in GENERATORS:
+        items = [generator] * 5
     else:
         items = sorted(GENERATORS.keys())
 
     for name in items:
-        value = GENERATORS[name]()
+        values = [GENERATORS[name]() for _ in range(amount)]
 
         workflow.new_item(
-            title=value,
-            subtitle=name,
-            arg=value,
+            title=values[0],
+            subtitle=f"{name} x {amount}",
+            arg="\n".join(values),
             valid=True,
         )
 
